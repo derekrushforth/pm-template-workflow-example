@@ -1,0 +1,22 @@
+{
+  "name": "pm-template-workflow-example",
+  "version": "0.0.7",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Thumbs up!\" && exit 0"
+  },
+  "dependencies": {
+    "postmark-cli": "0.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://derekrushforth@github.com/derekrushforth/pm-template-workflow-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekrushforth/pm-template-workflow-example/issues"
+  },
+  "homepage": "https://github.com/derekrushforth/pm-template-workflow-example#readme"
+}

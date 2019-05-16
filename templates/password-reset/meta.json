@@ -1,0 +1,5 @@
+{
+  "Name": "Passwoed Reset",
+  "Alias": "password-reset",
+  "Subject": "Welcome to {{product_name}}, {{name}}!"
+}

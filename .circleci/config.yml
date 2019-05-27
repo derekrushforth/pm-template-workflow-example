@@ -39,17 +39,10 @@ jobs:
     machine:
       enabled: true
     steps:
-      - run:
-          name: Install Postmark-cli
-          command: |
-            npm i postmark-cli -g
-      - run:
-          name: Push to Postmark
-          command: |
-            POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ~/repo/templates -f
-      - run:
-          command: |
-            POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark"
+      - checkout
+      - run: npm i postmark-cli -g
+      - run: POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ./templates -f
+      - run: POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark"
 workflows:
   version: 2
   build-and-deploy:

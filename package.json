@@ -7,7 +7,7 @@
     "test": "echo \"Thumbs up!\" && exit 0"
   },
   "dependencies": {
-    "postmark-cli": "0.0.7"
+    "postmark-cli": "^1.0.0"
   },
   "repository": {
     "type": "git",

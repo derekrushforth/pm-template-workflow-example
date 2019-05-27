@@ -1,0 +1,1 @@
+POSTMARK_SERVER_TOKEN=123 ./bin/postmark templates pull ./templates

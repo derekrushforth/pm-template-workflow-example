@@ -50,11 +50,3 @@ jobs:
       - run:
           command: |
             POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="Templates pushed" --text="Templates have been pushed to Postmark"
-workflows:
-  version: 2
-  deploy:
-    jobs:
-      - deploy:
-        filters:
-          branches:
-            only: master

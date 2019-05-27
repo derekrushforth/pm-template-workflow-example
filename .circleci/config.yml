@@ -46,7 +46,7 @@ jobs:
       - run:
           name: Push to Postmark
           command: |
-            POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ./templates -f
+            POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ~/repo/templates -f
       - run:
           command: |
             POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark"

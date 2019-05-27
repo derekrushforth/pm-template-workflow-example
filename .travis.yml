@@ -10,5 +10,4 @@ deploy:
   on:
     branch: master
 after_deploy:
-  provider: script
-  script: POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="Templates pushed!" --text="$TRAVIS_JOB_WEB_URL\n$TRAVIS_BUILD_WEB_URL"
+  - POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="Templates pushed!" --text="$TRAVIS_JOB_WEB_URL\n$TRAVIS_BUILD_WEB_URL"

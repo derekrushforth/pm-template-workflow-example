@@ -1,8 +1,8 @@
 language: node_js
-before_install:
-  - npm i postmark-cli -g
 node_js:
   - "lts/*"
+before_deploy:
+  - npm i postmark-cli -g
 deploy:
   provider: script
   script: POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ./templates -f

@@ -13,8 +13,8 @@ jobs:
       - run:
           name: Push templates to Postmark
           command: |
-            POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ./templates -f
+            postmark templates push ./templates -f
       - run:
           name: Send notification email
           command: |
-            POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark - $CIRCLE_BUILD_URL"
+            postmark email raw -f=$FROM -t=$TO --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark - $CIRCLE_BUILD_URL"

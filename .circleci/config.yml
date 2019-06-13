@@ -1,10 +1,8 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   deploy:
+    branches:
+      only: master
     machine:
       enabled: true
     steps:
@@ -21,11 +19,3 @@ jobs:
           name: Send notification email
           command: |
             POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="[CircleCI] Templates pushed" --text="Templates have been pushed to Postmark - $CIRCLE_BUILD_URL"
-workflows:
-  version: 2
-  postmark_templates:
-    jobs:
-      - deploy:
-          filters:
-            branches:
-              only: master

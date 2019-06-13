@@ -3,8 +3,6 @@ jobs:
   build:
     branches:
       only: master
-    machine:
-      enabled: true
     steps:
       - checkout
       - run:

@@ -5,8 +5,8 @@ before_deploy:
   - npm i postmark-cli -g
 deploy:
   provider: script
-  script: POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark templates push ./templates -f
+  script: postmark templates push ./templates -f
   on:
     branch: master
 after_deploy:
-  - POSTMARK_SERVER_TOKEN=$SERVER_TOKEN postmark email raw -f=$FROM -t=$TO --subject="[Travis CI] Templates pushed" --text="Templates have been pushed to Postmark - $TRAVIS_BUILD_WEB_URL"
+  - postmark email raw -f=$FROM -t=$TO --subject="[Travis CI] Templates pushed" --text="Templates have been pushed to Postmark - $TRAVIS_BUILD_WEB_URL"

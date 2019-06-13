@@ -1,5 +1,5 @@
 {
-  "Name": "Invoice",
+  "Name": "Invoice test",
   "Alias": "invoice",
   "Subject": "Please pay {{ total }} due by {{ due_date }}"
 }

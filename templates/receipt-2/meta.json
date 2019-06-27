@@ -1,5 +1,5 @@
 {
-  "Name": "Receipt",
+  "Name": "Receipt 2",
   "Alias": "receipt-2",
   "Subject": "Receipt for {{ product_name }}\n",
   "TemplateType": "Standard",

@@ -1,0 +1,7 @@
+{
+  "Name": "Receipt nested",
+  "Alias": "receipt-nested",
+  "Subject": "Receipt for {{ product_name }}\n",
+  "TemplateType": "Standard",
+  "LayoutTemplate": "plain"
+}

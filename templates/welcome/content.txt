@@ -1,7 +1,3 @@
-Thanks for trying out {{product_name}}. We’ve pulled together some information and resources to help you get started.
-
-{{product_name}} ( {{product_url}} )
-
 ******************
 Welcome, {{name}}!
 ******************
@@ -32,9 +28,3 @@ P.S. Need immediate help getting started? Check out our help documentation ( {{ 
 If you’re having trouble with the button above, copy and paste the URL below into your web browser.
 
 {{action_url}}
-
-© 2019 {{product_name}}. All rights reserved.
-
-{{company_name}}
-
-{{company_address}}

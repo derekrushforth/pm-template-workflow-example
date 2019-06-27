@@ -1,5 +1,5 @@
 {
-  "Name": "Welcome hai",
+  "Name": "Welcome",
   "Alias": "welcome",
   "Subject": "Welcome to {{product_name}}, {{name}}!\n",
   "TemplateType": "Standard",
